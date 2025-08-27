@@ -1,0 +1,86 @@
+{
+  "1": {
+    "liked": [
+      {
+        "name": "Fish Tacos with Avocado",
+        "price": 0
+      },
+      {
+        "name": "Mediterranean Bowl",
+        "price": 0
+      },
+      {
+        "name": "Vegetarian Pasta Primavera",
+        "price": 0
+      },
+      {
+        "name": "Vegetarian Pad Thai",
+        "price": 0
+      },
+      {
+        "name": "Margherita Pizza",
+        "price": 0
+      }
+    ],
+    "disliked": [
+      "Spicy Food",
+      {
+        "name": "Asian Stir Fry with Rice",
+        "price": 0
+      },
+      {
+        "name": "Grilled Chicken Caesar Salad",
+        "price": 0
+      },
+      {
+        "name": "Quinoa Buddha Bowl",
+        "price": 0
+      }
+    ],
+    "neutral": [
+      {
+        "name": "Greek Gyro Plate",
+        "price": 0
+      }
+    ]
+  },
+  "2": {
+    "liked": [
+      "Quinoa Buddha Bowl",
+      "Vegetable Sushi Roll Combo"
+    ],
+    "disliked": [
+      "BBQ Pulled Pork Sandwich",
+      "Beef Burrito Bowl"
+    ]
+  },
+  "3": {
+    "liked": [
+      "Quinoa Buddha Bowl",
+      "BBQ Pulled Pork Sandwich",
+      {
+        "name": "Vegetarian Pad Thai",
+        "price": 0
+      },
+      {
+        "name": "Grilled Chicken Caesar Salad",
+        "price": 0
+      },
+      {
+        "name": "Vegetarian Pasta Primavera",
+        "price": 0
+      }
+    ],
+    "disliked": [],
+    "neutral": [
+      {
+        "name": "Mediterranean Bowl",
+        "price": 0
+      },
+      {
+        "name": "Asian Stir Fry with Rice",
+        "price": 0
+      }
+    ]
+  }
+}

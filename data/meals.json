@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Grilled Chicken Caesar Salad",
+    "description": "Fresh romaine lettuce, grilled chicken breast, parmesan cheese, croutons, and caesar dressing",
+    "price": 12.99,
+    "cuisine_type": "American",
+    "ingredients": ["Chicken Breast", "Romaine Lettuce", "Parmesan Cheese", "Croutons", "Caesar Dressing"],
+    "category": "Salad"
+  },
+  {
+    "id": 2,
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with fresh mozzarella, tomato sauce, and basil leaves",
+    "price": 14.50,
+    "cuisine_type": "Italian",
+    "ingredients": ["Pizza Dough", "Mozzarella", "Tomato Sauce", "Fresh Basil"],
+    "category": "Pizza"
+  },
+  {
+    "id": 3,
+    "name": "Beef Burrito Bowl",
+    "description": "Seasoned ground beef over rice with black beans, cheese, salsa, and guacamole",
+    "price": 11.75,
+    "cuisine_type": "Mexican",
+    "ingredients": ["Ground Beef", "Rice", "Black Beans", "Cheese", "Salsa", "Guacamole"],
+    "category": "Bowl"
+  },
+  {
+    "id": 4,
+    "name": "Vegetarian Pad Thai",
+    "description": "Rice noodles stir-fried with vegetables, tofu, and traditional pad thai sauce",
+    "price": 10.25,
+    "cuisine_type": "Thai",
+    "ingredients": ["Rice Noodles", "Tofu", "Bean Sprouts", "Carrots", "Pad Thai Sauce"],
+    "category": "Noodles"
+  },
+  {
+    "id": 5,
+    "name": "Atlantic Salmon",
+    "description": "Grilled salmon fillet with lemon herb butter, served with roasted vegetables",
+    "price": 18.99,
+    "cuisine_type": "American",
+    "ingredients": ["Salmon Fillet", "Lemon", "Herbs", "Roasted Vegetables"],
+    "category": "Seafood"
+  },
+  {
+    "id": 6,
+    "name": "Chicken Tikka Masala",
+    "description": "Tender chicken in creamy tomato-based curry sauce, served with basmati rice",
+    "price": 13.50,
+    "cuisine_type": "Indian",
+    "ingredients": ["Chicken", "Tomato Sauce", "Cream", "Spices", "Basmati Rice"],
+    "category": "Curry"
+  },
+  {
+    "id": 7,
+    "name": "Greek Gyro Plate",
+    "description": "Sliced gyro meat with tzatziki, pita bread, and Greek salad",
+    "price": 12.25,
+    "cuisine_type": "Greek",
+    "ingredients": ["Gyro Meat", "Tzatziki", "Pita Bread", "Cucumber", "Tomatoes", "Olives"],
+    "category": "Mediterranean"
+  },
+  {
+    "id": 8,
+    "name": "Quinoa Buddha Bowl",
+    "description": "Nutritious bowl with quinoa, roasted vegetables, avocado, and tahini dressing",
+    "price": 9.99,
+    "cuisine_type": "Healthy",
+    "ingredients": ["Quinoa", "Roasted Vegetables", "Avocado", "Tahini", "Seeds"],
+    "category": "Bowl"
+  },
+  {
+    "id": 9,
+    "name": "BBQ Pulled Pork Sandwich",
+    "description": "Slow-cooked pulled pork with BBQ sauce on a brioche bun, served with coleslaw",
+    "price": 11.50,
+    "cuisine_type": "American",
+    "ingredients": ["Pulled Pork", "BBQ Sauce", "Brioche Bun", "Coleslaw"],
+    "category": "Sandwich"
+  },
+  {
+    "id": 10,
+    "name": "Vegetable Sushi Roll Combo",
+    "description": "Assorted vegetable sushi rolls with miso soup and edamame",
+    "price": 15.75,
+    "cuisine_type": "Japanese",
+    "ingredients": ["Sushi Rice", "Nori", "Cucumber", "Avocado", "Carrot", "Miso Soup"],
+    "category": "Sushi"
+  }
+]

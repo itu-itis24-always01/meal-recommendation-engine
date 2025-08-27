@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMate - Smart Meal Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome" class="screen active">
+            <div class="logo">
+                <div class="logo-container">
+                    <div class="logo-brand">
+                        <div class="logo-icon">🍴</div>
+                        <h1>MealMate</h1>
+                        <div class="logo-tagline">Smart Dining</div>
+                    </div>
+                    <div class="logo-accent">✨</div>
+                </div>
+                <p>Your Smart Meal Recommendation Engine</p>
+            </div>
+            
+            <!-- Features Section -->
+            <div class="features">
+                <h3>✨ What We Offer</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-text">AI-Powered Recommendations</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <div class="feature-text">Budget-Friendly Options</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">❤️</div>
+                        <div class="feature-text">Learns Your Preferences</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="showScreen('login')">Get Started</button>
+            
+            <!-- Simplified App Info Footer -->
+            <div class="app-info">
+                MealMate v1.0
+            </div>
+        </div>
+
+        <!-- Login Screen -->
+        <div id="login" class="screen">
+            <div class="logo">
+                <div class="logo-container">
+                    <div class="logo-brand">
+                        <div class="logo-icon">🍴</div>
+                        <h1>MealMate</h1>
+                        <div class="logo-tagline">Smart Dining</div>
+                    </div>
+                    <div class="logo-accent">✨</div>
+                </div>
+                <p>Welcome Back!</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="button" class="btn btn-secondary" onclick="showScreen('register')">Need an Account? Sign Up</button>
+            </form>
+            <div id="loginError" class="error" style="display: none;"></div>
+        </div>
+
+        <!-- Register Screen -->
+        <div id="register" class="screen">
+            <div class="logo">
+                <div class="logo-container">
+                    <div class="logo-brand">
+                        <div class="logo-icon">🍴</div>
+                        <h1>MealMate</h1>
+                        <div class="logo-tagline">Smart Dining</div>
+                    </div>
+                    <div class="logo-accent">✨</div>
+                </div>
+                <p>Join Our Community!</p>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name:</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="button" class="btn btn-secondary" onclick="showScreen('login')">Already Have an Account? Sign In</button>
+            </form>
+            <div id="registerError" class="error" style="display: none;"></div>
+            <div id="registerSuccess" class="success" style="display: none;"></div>
+        </div>
+
+        <!-- Main App Screen -->
+        <div id="mainApp" class="screen">
+            <div class="user-section">
+                <div class="nav-buttons">
+                    <button class="nav-btn logout-btn" onclick="logout()">Logout</button>
+                    <button class="nav-btn" onclick="showScreen('settings')">⚙️ Settings</button>
+                </div>
+                <div class="user-info">
+                    <h2>Welcome, <span id="userName"></span>!</h2>
+                </div>
+            </div>
+            
+            <div class="budget-input">
+                <div class="budget-circle" id="budgetCircle">
+                    <input type="number" id="budgetInput" placeholder="0" min="1" max="1000">
+                    <label>Enter Your Budget ($)</label>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="getMealRecommendation()">Get Meal Recommendation</button>
+            
+            <!-- Quick Tips -->
+            <div class="app-info">
+                💡 <strong>Pro Tip:</strong> Rate meals to get better recommendations!
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settings" class="screen">
+            <div class="user-section">
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="showScreen('mainApp')">← Back</button>
+                </div>
+                <div class="user-info">
+                    <h2>⚙️ Settings</h2>
+                </div>
+            </div>
+
+            <!-- Account Information -->
+            <div class="settings-section">
+                <h3>👤 Account Information</h3>
+                <div class="form-group">
+                    <label for="settingsName">Full Name:</label>
+                    <input type="text" id="settingsName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="settingsEmail">Email:</label>
+                    <input type="email" id="settingsEmail" readonly>
+                </div>
+                <div class="form-group password-field">
+                    <label for="settingsPassword">Password:</label>
+                    <input type="password" id="settingsPassword" value="••••••••" readonly>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+                </div>
+            </div>
+
+            <!-- Meal Preferences -->
+            <div class="settings-section">
+                <h3>🍽️ Your Meal History</h3>
+                <div id="likedMeals">
+                    <h4 class="preference-title liked">👍 Liked Meals</h4>
+                    <div id="likedMealsList"></div>
+                </div>
+                <div id="neutralMeals" style="margin-top: 1rem;">
+                    <h4 class="preference-title neutral">🤔 Unrated Meals</h4>
+                    <div id="neutralMealsList"></div>
+                </div>
+                <div id="dislikedMeals" style="margin-top: 1rem;">
+                    <h4 class="preference-title disliked">👎 Disliked Meals</h4>
+                    <div id="dislikedMealsList"></div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="settings-section">
+                <h3>🔧 Actions</h3>
+                <button class="btn btn-secondary" onclick="clearAllPreferences()">Clear All Preferences</button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading" class="screen">
+            <div class="loading">
+                <div class="spinner"></div>
+                <h3>Finding Perfect Meals for You...</h3>
+                <p>Please wait while we analyze your preferences</p>
+            </div>
+        </div>
+
+        <!-- Recommendation Screen -->
+        <div id="recommendation" class="screen">
+            <div class="user-section">
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="showScreen('mainApp')">← Back</button>
+                </div>
+                <div class="user-info">
+                    <h2>🍽️ Meal Recommendation</h2>
+                </div>
+            </div>
+            
+            <div id="recommendationCard" class="recommendation-card">
+                <!-- Recommendation content will be inserted here -->
+            </div>
+            
+            <button class="btn btn-secondary" onclick="getMealRecommendation()">Get Another Recommendation</button>
+            
+            <!-- Rating Info -->
+            <div class="app-info">
+                👍👎 Your ratings help us learn your taste preferences!
+            </div>
+        </div>
+
+        <!-- Meal Detail Modal -->
+        <div id="mealDetailModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeMealModal()">&times;</span>
+                <div id="mealDetailContent">
+                    <!-- Meal details will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
